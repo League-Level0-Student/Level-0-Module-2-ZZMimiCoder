@@ -2,7 +2,7 @@
 //    Level 0
 
 
-package _08_safe_cracker;
+
 
 import java.applet.AudioClip;
 import java.io.File;

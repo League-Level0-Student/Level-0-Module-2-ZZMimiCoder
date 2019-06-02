@@ -1,15 +1,19 @@
 //    Copyright (c) The League of Amazing Programmers 2013-2019
 //    Level 0
 
-package _01_intro_to_random;
+
 
 import java.util.Random;
 
 public class IntroToRandom {
 	public static void main(String[] args) {
-		
-		int r = 0;
-		
+		Random rand = new Random();
+		int r = rand.nextInt(101);
+		System.out.println(r);
+		r = rand.nextInt(75 - 25 + 1) + 25; 
+		System.out.println(r);
+		r = rand.nextInt(88 - -222 + 1) + -222;
+		System.out.println(r); 
 		//3. Now make r random. 
 		//   Create an object of the Random class
 		//	 use .nextInt() to get a random number

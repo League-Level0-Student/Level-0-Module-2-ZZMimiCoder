@@ -4,6 +4,8 @@
 package DiceRoll;
 
 import java.awt.Dimension;
+import java.util.Random;
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -13,7 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class DiceRoll {
-
+	
 	private JFrame window = new JFrame("Roll the Dice!");
 	private JPanel panel = new JPanel();
 	private JButton rollButton = new JButton("CLICK HERE TO ROLL");
@@ -32,12 +34,12 @@ public class DiceRoll {
 	
 	public void run() {
 		try {
-			oneImg = new ImageIcon(getClass().getResource("dice 1.png"));
-			twoImg = new ImageIcon(getClass().getResource("dice 2.png"));
-			threeImg = new ImageIcon(getClass().getResource("dice 3.png"));
-			fourImg = new ImageIcon(getClass().getResource("dice 4.png"));
-			fiveImg = new ImageIcon(getClass().getResource("dice 5.png"));
-			sixImg = new ImageIcon(getClass().getResource("dice 6.png"));
+			oneImg = new ImageIcon(getClass().getResource("dice_1.png"));
+			twoImg = new ImageIcon(getClass().getResource("dice_2.png"));
+			threeImg = new ImageIcon(getClass().getResource("dice_3.png"));
+			fourImg = new ImageIcon(getClass().getResource("dice_4.png"));
+			fiveImg = new ImageIcon(getClass().getResource("dice_5.png"));
+			sixImg = new ImageIcon(getClass().getResource("dice_6.png"));
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Could not find one or more dice images");
 			System.exit(0);
@@ -48,18 +50,19 @@ public class DiceRoll {
 		rollButton.addActionListener((e) -> {
 
 			// 1. Make randomChoice equal to a random number between 1 and 6
-			int randomChoice = 0;
+			Random rand = new Random();
+			int randomChoice = rand.nextInt(6);
 
 			// 2. Fix the code below so that it displays the correct image
 			if (randomChoice == 0) {
 				label.setIcon(oneImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 1) {
 				label.setIcon(twoImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 2) {
 				label.setIcon(threeImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 3) {
 				label.setIcon(fourImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 4) {
 				label.setIcon(fiveImg);
 			} else {
 				label.setIcon(sixImg);

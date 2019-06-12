@@ -1,7 +1,8 @@
+package Intro_To_Random;
 //    Copyright (c) The League of Amazing Programmers 2013-2019
 //    Level 0
 
-package AnimalFarm;
+
 
 import java.applet.AudioClip;
 

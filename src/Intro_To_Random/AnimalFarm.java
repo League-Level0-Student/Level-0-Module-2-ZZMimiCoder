@@ -20,10 +20,22 @@ public class AnimalFarm {
 		/*
 		 * 1. Ask the user which animal they want, then play the sound of that animal.
 		 */
-		
+		playLlama();
+		playMeow();
+		playMoo();
+		playQuack();
+		playWoof();
 		/* 2. Make it so that the user can keep entering new animals. */
 	}
 
+	void playLlama() {
+		playNoise(llamaFile);
+	}
+	
+	void playMeow() {
+		playNoise(meowFile);
+	}
+	
 	void playMoo() {
 		playNoise(mooFile);
 	}

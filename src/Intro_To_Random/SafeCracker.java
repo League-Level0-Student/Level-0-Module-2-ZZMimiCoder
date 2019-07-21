@@ -9,7 +9,7 @@ import javax.sound.sampled.Clip;
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 public class SafeCracker {
-	public static void main(String[] args) {
+	public static void main(String[] Args) {
 		for (int X = 0; X < 10000000; X++) {
 			TryCode(X);
 		}
